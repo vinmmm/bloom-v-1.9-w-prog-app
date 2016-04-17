@@ -1,0 +1,45 @@
+<!-- The order view -->
+<section class="delivery" data-ng-controller="OrdersController" data-ng-init="findOne()">
+    <h1 data-ng-bind="order.title"></h1>
+    <!-- Show the editing buttons to the order creator -->
+    <div data-ng-show="authentication.user._id == order.creator._id">
+        <a href="/#!/orders/{{order._id}}/edit">edit</a>
+        <a href="/#!/" data-ng-click="delete();">delete</a>
+    </div>
+    <small>
+        <em>Posted on</em>
+        <em data-ng-bind="order.created | date:'mediumDate'"></em>
+        <em>by</em>
+        <em data-ng-bind="order.creator.fullName"></em>
+    </small>
+    
+</section>
+<!-- The list orders view -->
+<section class="delivery" data-ng-controller="OrdersController" data-ng-init="find()">
+    <div data-ng-repeat="order in orders | limitTo: 1">
+        <h1>Progress</h1>
+        
+    <div class="checkoutWrap">
+    <ul class="checkoutBar">
+        <!-- The list of order -->
+        
+    <li ng-class="{ visited : order.orderStarted}">Order Start</li>
+    
+    <li ng-class="{ active : order.restaurantNotified}">Notified</li>
+
+    <li ng-class="{ active : order.driverAtRestaurant}">Driver Sent</li>
+
+    <li ng-class="{ active : order.foodPickedUp}">Food Picked Up</li>
+
+    <li ng-class="{ visited : order.deliveredToCustomer}">Delivery</li>
+        
+    </ul>
+    </div>
+    </div>
+    <!-- If there are no orders in the list, suggest the user's create a new order -->
+    <div data-ng-hide="!orders || orders.length">
+        No orders yet, why don't you <a href="/#!/orders/create">create one</a>?
+    </div>
+</section>
+
+

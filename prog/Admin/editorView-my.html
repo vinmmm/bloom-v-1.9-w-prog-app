@@ -1,0 +1,37 @@
+<div class="panel-body">
+    <div class="form-group">
+        <label>Driver Name:</label>
+        <input class="form-control" ng-model="currentRestaurant.driverName" />
+    </div>
+    <div class="form-group">
+        <label>Order Placed:</label>
+        <input class="form-control" ng-model="currentRestaurant.orderPlaced" />
+    </div>
+    <div class="form-group">
+        <label>Order Started:</label>
+        <input class="form-control" ng-model="currentRestaurant.orderStarted" />
+    </div>
+    <div class="form-group">
+    <label>Restaurant Notified:</label>
+        <input class="form-control" ng-model="currentRestaurant.restaurantNotified" />
+    </div>
+    <div class="form-group">
+        <label>Driver At Restaurant:</label>
+        <input class="form-control" ng-model="currentRestaurant.driverAtRestaurant" />
+    </div>
+    <div class="form-group">
+    <label>Food Picked Up:</label>
+        <input class="form-control" ng-model="currentRestaurant.foodPickedUp" />
+    </div>
+    <div class="form-group">
+        <label>Delivered To Customer:</label>
+        <input class="form-control" ng-model="currentRestaurant.deliveredToCustomer" />
+    </div>
+    <div class="form-group">
+    <label>Estimated Delivery Time:</label>
+        <input class="form-control" ng-model="currentRestaurant.estimatedDeliveryTime" />
+    </div>
+    
+    <button class="btn btn-primary" ng-click="saveEdit(currentRestaurant)">Save</button>
+    <button class="btn btn-primary" ng-click="cancelEdit()">Cancel</button>
+</div>

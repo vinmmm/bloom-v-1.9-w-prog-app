@@ -1,0 +1,74 @@
+<!-- The create order view -->
+<section data-ng-controller="OrdersController">
+	<h1>New Order</h1>
+	<!-- The new order form -->
+	<form data-ng-submit="create()" novalidate>
+		<div>
+			<label for="title">Title</label>
+			<div>
+				<input type="text" data-ng-model="title" id="title" placeholder="Title" required>
+			</div>
+		</div>
+		<div>
+			<label for="content">Content</label>
+			<div>
+				<textarea data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
+			</div>
+		</div>
+		<div>
+			<label for="orderPlaced">Order Placed</label>
+			<div>
+				<input type="text" data-ng-model="orderPlaced" id="orderPlaced" placeholder="Order Placed" required>
+			</div>
+		</div>
+		<div>
+			<label for="orderStarted">Order Started</label>
+			<div>
+				<input type="text" data-ng-model="orderStarted" id="orderStarted" placeholder="Order Started" required>
+			</div>
+		</div>
+		<div>
+			<label for="restaurantNotified">Restaurant Notified</label>
+			<div>
+				<input type="text" data-ng-model="restaurantNotified" id="restaurantNotified" placeholder="Restaurant Notified" required>
+			</div>
+		</div>
+		<div>
+			<label for="driverAtRestaurant">Driver At Restaurant</label>
+			<div>
+				<input type="text" data-ng-model="driverAtRestaurant" id="driverAtRestaurant" placeholder="Driver At Restaurant" required>
+			</div>
+		</div>
+		<div>
+			<label for="foodPickedUp">Food Picked Up</label>
+			<div>
+				<input type="text" data-ng-model="foodPickedUp" id="foodPickedUp" placeholder="Food Picked Up" required>
+			</div>
+		</div>
+		<div>
+			<label for="deliveredToCustomer">Delivered To Customer</label>
+			<div>
+				<input type="text" data-ng-model="deliveredToCustomer" id="deliveredToCustomer" placeholder="Delivered To Customer" required>
+			</div>
+		</div>
+		<div>
+			<label for="driverName">Driver Name</label>
+			<div>
+				<input type="text" data-ng-model="driverName" id="driverName" placeholder="Driver Name" required>
+			</div>
+		</div>
+		<div>
+			<label for="estimatedDeliveryTime">Estimated Delivery Time</label>
+			<div>
+				<input type="text" data-ng-model="estimatedDeliveryTime" id="estimatedDeliveryTime" placeholder="Estimated Delivery Time" required>
+			</div>
+		</div>
+		<div>
+			<input type="submit">
+		</div>
+		<!-- The error message element -->
+		<div data-ng-show="error">
+			<strong data-ng-bind="error"></strong>
+		</div>
+	</form>
+</section>

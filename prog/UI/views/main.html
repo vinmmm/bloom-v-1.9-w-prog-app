@@ -1,0 +1,55 @@
+<h1 class="delivery">Delivery App</h1>
+    
+    
+      
+    
+<div ng-controller="mainCtrl" class="delivery" ng-repeat="theorder in theorders | limitTo: 1">
+     <!-- Start Prog UI -->
+<p>
+    <img src="images/z.png" alt="zebyoulawn"><br>
+  </p>
+  
+ <p>Your Order was placed on<h5>{{ theorder.orderPlaced | iso | date: 'EEEE, MMMM d, y @ h:mm a' }}</h5></p>
+<div class="checkoutWrap">
+  <ul class="checkoutBar">
+
+    <li ng-class="{ visited : theorder.orderStarted}">Order Start</li>
+    
+    <li ng-class="{ active : theorder.restaurantNotified}">Notified</li>
+
+    <li ng-class="{ active : theorder.driverAtRestaurant}">Driver Sent</li>
+
+    <li ng-class="{ active : theorder.foodPickedUp}">Food Picked Up</li>
+
+    <li ng-class="{ visited : theorder.deliveredToCustomer}">Delivery</li>
+
+  </ul>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  <p>Your Order is being brought by<h5>{{ theorder.driverName }}</h5></p>
+  
+
+  <h3>Estimated time of delivery</h3>
+  <h1>Today{{ theorder.estimatedDeliveryTime | iso | date: ' @ h:mm a' }}</h1>
+  
+</div>  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <!-- End Prog UI -->

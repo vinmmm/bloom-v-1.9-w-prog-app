@@ -1,0 +1,69 @@
+{
+	"type": "Collection",
+	"properties": {
+		"driverName": {
+			"name": "driverName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "driverName",
+			"order": 0
+		},
+		"orderPlaced": {
+			"name": "orderPlaced",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "orderPlaced",
+			"order": 1
+		},
+		"restaurantNotified": {
+			"name": "restaurantNotified",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "restaurantNotified",
+			"order": 2
+		},
+		"driverAtRestaurant": {
+			"name": "driverAtRestaurant",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "driverAtRestaurant",
+			"order": 3
+		},
+		"foodPickedUp": {
+			"name": "foodPickedUp",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "foodPickedUp",
+			"order": 4
+		},
+		"deliveredToCustomer": {
+			"name": "deliveredToCustomer",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "deliveredToCustomer",
+			"order": 5
+		},
+		"estimatedDeliveryTime": {
+			"name": "estimatedDeliveryTime",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "estimatedDeliveryTime",
+			"order": 6
+		},
+		"orderStarted": {
+			"name": "orderStarted",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "orderStarted",
+			"order": 7
+		}
+	}
+}
