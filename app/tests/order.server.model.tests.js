@@ -29,7 +29,14 @@ describe('Order Model Unit Tests:', function() {
 		user.save(function() {
 			order = new Order({
 				title: 'Order Title',
-				content: 'Order Content',
+				orderPlaced: 'placed order',
+                orderStarted: 'started',
+                restaurantNotified: 'notified',
+                driverAtRestaurant: 'driver arrived',
+                foodPickedUp: 'picked up the food',
+                deliveredToCustomer: 'delivered',
+                driverName: 'name of driver',
+                estimatedDeliveryTime: 'delivery time estimate',
 				user: user
 			});
 

@@ -1,18 +1,19 @@
 <!-- The create order view -->
 <section data-ng-controller="OrdersController">
+<div data-ng-show="authentication.user">
+        <a href="/signout">Signout</a> 
+</div>
+
 	<h1>New Order</h1>
+	<p><a href="/#!/orders">List Orders</a></p>
+	<br>
+	
 	<!-- The new order form -->
 	<form data-ng-submit="create()" novalidate>
 		<div>
 			<label for="title">Title</label>
 			<div>
 				<input type="text" data-ng-model="title" id="title" placeholder="Title" required>
-			</div>
-		</div>
-		<div>
-			<label for="content">Content</label>
-			<div>
-				<textarea data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
 			</div>
 		</div>
 		<div>
@@ -24,7 +25,7 @@
 		<div>
 			<label for="orderStarted">Order Started</label>
 			<div>
-				<input type="text" data-ng-model="orderStarted" id="orderStarted" placeholder="Order Started" required>
+		        <input type="datetime-local" ng-model="orderStarted" id="orderStarted" placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2016-12-31T00:00:00" required>
 			</div>
 		</div>
 		<div>

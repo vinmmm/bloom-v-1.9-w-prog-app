@@ -30,7 +30,14 @@ describe('Order Controller Unit Tests:', function() {
 		user.save(function() {
 			order = new Order({
 				title: 'Order Title',
-				content: 'Order Content',
+				orderPlaced: 'placed order',
+                orderStarted: 'started',
+                restaurantNotified: 'notified',
+                driverAtRestaurant: 'driver arrived',
+                foodPickedUp: 'picked up the food',
+                deliveredToCustomer: 'delivered',
+                driverName: 'name of driver',
+                estimatedDeliveryTime: 'delivery time estimate',
 				user: user
 			});
 
@@ -51,8 +58,15 @@ describe('Order Controller Unit Tests:', function() {
 				.end(function(err, res) {
 					res.body.should.be.an.Array.and.have.lengthOf(1);
 					res.body[0].should.have.property('title', order.title);
-					res.body[0].should.have.property('content', order.content);
-
+					res.body[0].should.have.property('orderPlaced', order.orderPlaced);
+					res.body[0].should.have.property('orderStarted', order.orderStarted);
+					res.body[0].should.have.property('restaurantNotified', order.restaurantNotified);
+					res.body[0].should.have.property('driverAtRestaurant', order.driverAtRestaurant);
+					res.body[0].should.have.property('foodPickedUp', order.foodPickedUp);
+					res.body[0].should.have.property('deliveredToCustomer', order.deliveredToCustomer);
+					res.body[0].should.have.property('driverName', order.driverName);
+					res.body[0].should.have.property('estimatedDeliveryTime', order.estimatedDeliveryTime);
+					
 					done();
 				});
 		});
@@ -65,7 +79,14 @@ describe('Order Controller Unit Tests:', function() {
 				.expect(200)
 				.end(function(err, res) {
 					res.body.should.be.an.Object.and.have.property('title', order.title);
-					res.body.should.have.property('content', order.content);
+					res.body.should.have.property('orderPlaced', order.orderPlaced);
+					res.body.should.have.property('orderStarted', order.orderStarted);
+					res.body.should.have.property('restaurantNotified', order.restaurantNotified);
+					res.body.should.have.property('driverAtRestaurant', order.driverAtRestaurant);
+					res.body.should.have.property('foodPickedUp', order.foodPickedUp);
+					res.body.should.have.property('deliveredToCustomer', order.deliveredToCustomer);
+					res.body.should.have.property('driverName', order.driverName);
+					res.body.should.have.property('estimatedDeliveryTime', order.estimatedDeliveryTime);
 
 					done();
 				});

@@ -66,7 +66,6 @@ exports.update = function(req, res) {
 
 	// Update the order fields
 	order.title = req.body.title;
-	order.content = req.body.content;
 	order.orderPlaced = req.body.orderPlaced;
 	order.orderStarted = req.body.orderStarted;
 	order.restaurantNotified = req.body.restaurantNotified;

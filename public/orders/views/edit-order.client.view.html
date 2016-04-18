@@ -1,5 +1,11 @@
 <!-- The edit order view -->
 <section data-ng-controller="OrdersController" data-ng-init="findOne()">
+<div data-ng-show="authentication.user">
+        <h1><span data-ng-bind="authentication.user.fullName"></span> , Do you wana <a href="/signout">Signout</a> ?</h1>
+        
+</div>
+ <a href="/#!/orders">List Orders</a>
+ <a href="/#!/orders/create">Create Order</a>
 	<h1>Edit Order</h1>
 	<!-- The edited order form -->
 	<form data-ng-submit="update()" novalidate>
@@ -7,12 +13,6 @@
 			<label for="title">Title</label>
 			<div>
 				<input type="text" data-ng-model="order.title" id="title" placeholder="Title" required>
-			</div>
-		</div>
-		<div>
-			<label for="content">Content</label>
-			<div>
-				<textarea data-ng-model="order.content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
 			</div>
 		</div>
 		<div>

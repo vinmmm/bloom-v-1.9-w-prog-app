@@ -17,11 +17,6 @@ var OrderSchema = new Schema({
 		trim: true,
 		required: 'Title cannot be blank'
 	},
-	content: {
-		type: String,
-		default: '',
-		trim: true
-	},
 	orderPlaced: {
 		type: String,
 		default: '',

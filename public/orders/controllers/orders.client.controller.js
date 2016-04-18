@@ -12,7 +12,6 @@ angular.module('orders').controller('OrdersController', ['$scope', '$routeParams
         	// Use the form fields to create a new order $resource object
             var order = new Orders({
                 title: this.title,
-                content: this.content,
                 orderPlaced: this.orderPlaced,
                 orderStarted: this.orderStarted,
                 restaurantNotified: this.restaurantNotified,

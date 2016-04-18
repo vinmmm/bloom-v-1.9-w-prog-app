@@ -43,7 +43,14 @@ describe('Testing Orders Controller', function() {
 			// Create a sample order
 			var sampleOrder = new Orders({
 				title: 'An Order about MEAN',
-				content: 'MEAN rocks!'
+				orderPlaced: 'placed',
+                orderStarted: 'started',
+                restaurantNotified: 'notified',
+                driverAtRestaurant: 'driver arrived',
+                foodPickedUp: 'picked up the food',
+                deliveredToCustomer: 'delivered',
+                driverName: 'name of driver',
+                estimatedDeliveryTime: 'delivery time estimate'
 			});
 
 			// Create a sample orders list
@@ -70,7 +77,14 @@ describe('Testing Orders Controller', function() {
 			// Create a sample order
 			var sampleOrder = new Orders({
 				title: 'An Order about MEAN',
-				content: 'MEAN rocks!'
+				orderPlaced: 'placed',
+                orderStarted: 'started',
+                restaurantNotified: 'notified',
+                driverAtRestaurant: 'driver arrived',
+                foodPickedUp: 'picked up the food',
+                deliveredToCustomer: 'delivered',
+                driverName: 'name of driver',
+                estimatedDeliveryTime: 'delivery time estimate'
 			});
 
 			// Set the 'orderId' route parameter

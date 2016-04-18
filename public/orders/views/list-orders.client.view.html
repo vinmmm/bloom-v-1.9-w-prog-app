@@ -1,6 +1,16 @@
 <!-- The list orders view -->
 <section data-ng-controller="OrdersController" data-ng-init="find()">
+<div data-ng-show="authentication.user">
+        <a href="/signout">Signout</a> 
+</div>
+        
+           
+       
 	<h1>Orders</h1>
+	<p><a href="/#!/orders/create">Create Order</a></p>
+	 <br>
+
+	
 	<ul>
 		<!-- The list of order -->
 		<li data-ng-repeat="order in orders">
