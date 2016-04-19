@@ -1,7 +1,7 @@
 <!-- The edit order view -->
 <section data-ng-controller="OrdersController" data-ng-init="findOne()">
 <div data-ng-show="authentication.user">
-        <h1><span data-ng-bind="authentication.user.fullName"></span> , Do you wana <a href="/signout">Signout</a> ?</h1>
+        <p><span data-ng-bind="authentication.user.fullName"></span> , Do you wana <a href="/signout">Signout</a> ?</p>
         
 </div>
  <a href="/#!/orders">List Orders</a>
@@ -24,7 +24,7 @@
 		<div>
 			<label for="orderStarted">Order Started</label>
 			<div>
-				<input type="text" data-ng-model="order.orderStarted" id="orderStarted" placeholder="Order Started" required>
+				<input type="text" data-ng-model="order.orderStarted" id="orderStarted" placeholder="Order Started" ng-true-value="ofCourse" ng-false-value="iWish" required>
 			</div>
 		</div>
 		<div>
